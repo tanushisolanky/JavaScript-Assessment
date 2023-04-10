@@ -1,0 +1,111 @@
+body{
+    font-family: 'Roboto';
+    font-size: large;
+}
+#form{
+    margin: 0 20px;
+    display: none;
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+.btn button{
+    margin: 10px 0;
+    cursor: pointer;
+}
+.btn1{
+    background-color:  rgb(194, 215, 230);
+    text-align: right;
+    display: flex;
+    padding: 10px 10px;
+    justify-content: flex-end;
+}
+#select{
+    width: 100px;
+    color: rgb(21, 118, 182);
+    font-size: 17px;
+}
+.add{
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    background-color:  rgb(30, 104, 153);
+    color: white;
+}
+input, select{
+    width: 400px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+::placeholder{
+    color: grey;
+}
+.label{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#update{
+    display: none;
+}
+#reset, #save, #update{
+    cursor: pointer;
+}
+p{
+    color: red;
+    display: none;
+}
+#save, #update{
+    background-color: rgb(30, 100, 146);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    height: 25px;
+}
+#reset{
+    background-color: rgb(77, 75, 75);
+    border: none;
+    border-radius: 3px;
+    height: 25px;
+    color: white;
+}
+table{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+.btnedit{
+    background-image: url(./images/edit.png);
+    background-repeat: no-repeat;
+    background-size: 19px;
+    height: 19px;
+    width: 19px;
+    border: none;
+    cursor: pointer;
+}
+.btndel{
+    background-image: url(./images/delete.png);
+    background-repeat: no-repeat;
+    background-size: 19px;
+    height: 19px;
+    width: 19px;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.td{
+    height: 40px;
+}
+.tr:nth-child(even){
+    background-color:  rgb(194, 215, 230);
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Assessment</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- nav buttons -->
+    <div class="btn">
+        <select id="select">
+            <option >Status</option>
+            <option value="open">Open</option>
+            <option value="error">Error</option>
+            <option value="success">Success</option>
+            <option value="inactive">Inactive</option> 
+        </select>
+        <button type="submit" onclick="showForm()" class="add">Add Customer</button>
+    </div>
+
+    <!-- form -->
+    <form id="form">
+
+        <div class="row">
+            <div class="label">
+            <label>NAME</label> <input type="text" id="name" placeholder="Enter Name" onkeyup="check()" required>
+            <p id="name-error">Please enter a valid name</p>
+            </div>
+            <div class="label">
+            <label>DESCRIPTION</label> <input type="text" id="description" placeholder="Enter Description" onkeyup="check()" required>
+            <p id="description-error">Please enter valid description</p>
+            </div>
+            <div class="label">
+            <label>STATUS</label> 
+                <select id="status" onkeyup="check()" required>
+                    <option >Enter Status</option>
+                    <option value="open">Open</option>
+                    <option value="error">Error</option>
+                    <option value="success">Success</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="label">
+            <label>RATE</label> <input type="text" id="rate" placeholder="Enter Rate" onkeyup="check()" required>
+            <p id="rate-error">Please enter valid rate</p>
+            </div>
+            <div class="label">
+            <label>BALANCE</label> <input type="text" id="balance" placeholder="Enter Balance" onkeyup="check()" required>
+            <p id="balance-error">Please enter valid balance</p>
+            </div>
+            <div class="label">
+            <label>DEPOSIT</label> <input type="text" id="deposit" placeholder="Enter Deposit" onkeyup="check()" required>
+            <p id="deposit-error">Please enter valid deposit</p>
+            </div>
+        </div>
+
+        <div class="btn1">
+        <button type="reset" id="reset">Cancel</button>
+        <button type="submit" id="save" onclick="addData()" disabled>Save</button>
+        <button type="submit" id="update" onclick="updateData()">Update</button>
+        </div>
+
+    </form>
+
+    <!-- table -->
+    <table id="table"></table>
+    <script src="./script.js"></script>
+</body>
+</html>
